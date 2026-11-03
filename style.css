@@ -486,3 +486,5 @@ dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}
  .hero-actions .city-control:hover::before{opacity:1}
 }
 @media(prefers-reduced-motion:reduce){.hero-actions .city-control::before{transition:none}}
+/* Full-width contact action in the stacked mobile layout. */
+@media(max-width:600px){.hero-actions .secondary{width:100%;max-width:none;justify-self:stretch}}
