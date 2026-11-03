@@ -55,3 +55,26 @@ document.addEventListener('keydown', event => {
     document.documentElement.classList.add('keyboard-navigation');
   }
 }, true);
+// Reveal only once; disconnect observation as soon as each card appears.
+const repairCards = [...document.querySelectorAll('.process .step')];
+const reduceRevealMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !reduceRevealMotion.matches) {
+  const revealObserver = new IntersectionObserver(entries => {
+    const visible = entries.filter(entry => entry.isIntersecting)
+      .sort((a, b) => repairCards.indexOf(a.target) - repairCards.indexOf(b.target));
+    visible.forEach((entry, index) => {
+      entry.target.style.setProperty('--reveal-delay', `${index * 500}ms`);
+      entry.target.classList.add('step-revealed');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  repairCards.forEach(card => {
+    card.classList.add('step-reveal');
+    revealObserver.observe(card);
+  });
+  reduceRevealMotion.addEventListener('change', event => {
+    if (!event.matches) return;
+    revealObserver.disconnect();
+    repairCards.forEach(card => card.classList.remove('step-reveal'));
+  });
+}
