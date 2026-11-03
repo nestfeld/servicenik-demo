@@ -493,3 +493,9 @@ dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}
 .process .step.step-reveal.step-revealed{opacity:1;translate:0 0}
 @media(prefers-reduced-motion:reduce){.process .step.step-reveal{opacity:1;translate:none;transition:none}}
 @media print{.process .step.step-reveal{opacity:1;translate:none}}
+/* Desktop badges respond to the pointer using compositor-friendly transforms. */
+@media(min-width:1025px) and (hover:hover) and (pointer:fine){
+ .hero-art .art-badge{translate:var(--badge-x,0px) var(--badge-y,0px);transition:translate .35s ease,transform .3s ease}
+ .hero-art .art-badge:hover{transform:translateY(-4px)}
+}
+@media(prefers-reduced-motion:reduce){.hero-art .art-badge{translate:none;transform:none!important;transition:none}}
