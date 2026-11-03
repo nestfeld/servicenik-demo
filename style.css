@@ -512,3 +512,31 @@ dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}
 @media(max-width:760px){.hero-art::before{opacity:.75}}
 /* Keep trust icons square when their width changes at responsive breakpoints. */
 .trust-bar .icon-box svg{height:auto;aspect-ratio:1;display:block}
+/* Keep the same gradient through hover: changing background-image to a solid
+   fill cannot interpolate and caused the brief color flash. */
+@media(hover:hover) and (pointer:fine){
+ .about .video-copy .button:hover{background:linear-gradient(135deg,#fff,#edf7ff)}
+}
+/* Keep a soft shadow without the expanding target-like ring. */
+.video-preview .play,.video-preview:hover .play{box-shadow:0 7px 22px #007cf547}
+.video-preview .play>svg{width:36px;height:36px}
+@media(max-width:600px){.video-preview .play>svg{width:30px;height:30px}}
+/* Offset the team-photo backing and add a static cyan halo. */
+.team-wrap::before{top:-30px;left:-23px;box-shadow:inset 0 1px 0 #ffffff80,0 0 26px #20baff42,0 10px 38px #007dff24}
+@media(max-width:600px){.team-wrap::before{top:-21px;left:-10px;box-shadow:inset 0 1px 0 #ffffff80,0 0 20px #20baff38,0 8px 28px #007dff1f}}
+/* Match the hero selector glow on the company-details action. */
+.about-copy > .button{position:relative;isolation:isolate;transform:none}
+.about-copy > .button::before{
+ content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+ box-shadow:0 0 0 1px #66d7ff66,0 0 24px #00b5ff66,0 10px 30px #007bff38;
+ opacity:0;transition:opacity .3s ease;
+}
+@media(hover:hover) and (pointer:fine){
+ .about-copy > .button:hover{transform:none;box-shadow:0 8px 18px #008aff20,inset 0 1px 0 #ffffff26}
+ .about-copy > .button:hover::before{opacity:1}
+}
+@media(prefers-reduced-motion:reduce){.about-copy > .button::before{transition:none}}
+/* Soft blue depth for the repair stages, with a brighter central accent. */
+.process .step{box-shadow:0 14px 32px #357bd51a,0 3px 10px #5bbcff0d,inset 0 1px 0 #ffffffeb}
+.process .step.featured{box-shadow:0 16px 36px #078aff26,0 0 24px #35c3ff1c,inset 0 1px 0 #ffffffd9}
+@media(max-width:600px){.process .step{box-shadow:0 10px 26px #357bd518,inset 0 1px 0 #ffffffeb}.process .step.featured{box-shadow:0 12px 28px #078aff22,0 0 18px #35c3ff17,inset 0 1px 0 #ffffffd9}}
