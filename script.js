@@ -78,37 +78,3 @@ if ('IntersectionObserver' in window && !reduceRevealMotion.matches) {
     repairCards.forEach(card => card.classList.remove('step-reveal'));
   });
 }
-// Pointer-only parallax: no animation loop runs while the pointer is still.
-const heroArt = document.querySelector('.hero-art');
-const badgePointerMedia = window.matchMedia('(min-width:1025px) and (hover:hover) and (pointer:fine)');
-if (heroArt) {
-  const badges = [...heroArt.querySelectorAll('.art-badge')];
-  let badgeFrame = 0;
-  let badgeX = 0, badgeY = 0;
-  const resetBadges = () => {
-    cancelAnimationFrame(badgeFrame);
-    badgeFrame = 0;
-    badges.forEach(badge => {
-      badge.style.removeProperty('--badge-x');
-      badge.style.removeProperty('--badge-y');
-    });
-  };
-  heroArt.addEventListener('pointermove', event => {
-    if (!badgePointerMedia.matches || reduceRevealMotion.matches) return;
-    const bounds = heroArt.getBoundingClientRect();
-    badgeX = (event.clientX - bounds.left) / bounds.width - .5;
-    badgeY = (event.clientY - bounds.top) / bounds.height - .5;
-    if (badgeFrame) return;
-    badgeFrame = requestAnimationFrame(() => {
-      badges.forEach((badge, index) => {
-        const direction = index ? -1 : 1;
-        badge.style.setProperty('--badge-x', `${(badgeX * 12 * direction).toFixed(2)}px`);
-        badge.style.setProperty('--badge-y', `${(badgeY * 10 * direction).toFixed(2)}px`);
-      });
-      badgeFrame = 0;
-    });
-  }, {passive:true});
-  heroArt.addEventListener('pointerleave', resetBadges);
-  badgePointerMedia.addEventListener('change', resetBadges);
-  reduceRevealMotion.addEventListener('change', resetBadges);
-}
