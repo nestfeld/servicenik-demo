@@ -2,7 +2,7 @@
 if (typeof Choices !== 'undefined') {
   new Choices('#city', {
     searchEnabled: false, shouldSort: false, allowHTML: false,
-    itemSelectText: '', position: 'bottom',
+    itemSelectText: '', position: 'auto',
     labelId: 'city-label',
   });
 }
