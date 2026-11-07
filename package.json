@@ -1,0 +1,12 @@
+{
+  "name": "servicenik-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Servicenik demo; optional asset build",
+  "scripts": {
+    "build": "node tools/build-site.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

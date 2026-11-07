@@ -1,0 +1,36 @@
+{
+  "styles": [
+    "assets/vendor/choices/choices.min.css",
+    "style.css",
+    "github-sections.css",
+    "hero.css",
+    "homepage.css",
+    "catalog.css",
+    "reviews.css",
+    "advantages.css",
+    "management.css",
+    "team.css",
+    "company-group.css",
+    "articles.css",
+    "locations.css",
+    "section-lighting.css",
+    "management-panel.css",
+    "brand-palette.css",
+    "content-system.css",
+    "request.css",
+    "selects.css",
+    "ambient-lighting.css",
+    "control-focus.css",
+    "dialogs.css",
+    "mobile-addresses.css",
+    "header-menu.css"
+  ],
+  "scripts": [
+    "dialogs.js",
+    "script.js",
+    "header-menu.js",
+    "phone-mask.js",
+    "homepage.js",
+    "reviews.js"
+  ]
+}

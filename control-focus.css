@@ -1,0 +1,10 @@
+/* No external focus rings on buttons or dropdown controls. */
+:is(a,button,select,summary,[role="button"],[role="combobox"],a.button,a.home-button,a.home-outline):is(:focus,:focus-visible){outline:none!important;outline-offset:0!important}
+.city-control:focus-within,.site-select.choices:is(:focus,:focus-visible){outline:none!important;outline-offset:0!important}
+.site-select.choices:is(.is-open,.is-focused) .choices__inner{box-shadow:none!important}
+/* A restrained keyboard state replaces the wide outline. */
+html.keyboard-navigation :is(a,button,summary,[role="button"],a.button,a.home-button,a.home-outline):focus-visible{filter:brightness(.92)}
+html.keyboard-navigation .site-select.choices:focus-visible .choices__inner{filter:brightness(.96)}
+/* Reveal the skip link only for keyboard focus, not clicks or restored focus. */
+body>.skip-link:not(:focus-visible){position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+body>.skip-link:focus-visible{position:fixed;top:10px;left:10px;z-index:10000;width:auto;height:auto;margin:0;padding:12px 16px;clip-path:none;border:1px solid #b9d8f1;border-radius:12px;background:#fff;color:#101a3b;box-shadow:0 8px 24px #235d8c26}

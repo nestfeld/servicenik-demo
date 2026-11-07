@@ -1,70 +1,100 @@
-/* Compact two-field repair request. */
-#request {padding:48px 0;background:radial-gradient(ellipse at 90% 0%,#269def44,transparent 65%),linear-gradient(115deg,#0865af,#087bd4);color:#fff;}
-#request > .home-container {display:block;width:calc(100% - 48px);max-width:850px;}
-#request .home-title {display:block;max-width:820px;margin:0 auto 26px;text-align:center;font:800 clamp(23px,2vw,28px)/1.35 Manrope,Arial,sans-serif;letter-spacing:-.025em;}
-#request .repair-form {grid-template-columns:minmax(0,1fr) 190px;gap:20px 22px;}
-#request .repair-form > .request-city {grid-column:1/-1;grid-row:1;}
-#request .repair-form > .request-phone {grid-column:1;grid-row:2;}
-#request .repair-form input:not([type=checkbox]),#request .repair-form select {height:54px;padding:14px 18px;border:1px solid #ffffff80;border-radius:14px;font-size:17px;box-shadow:inset 0 1px 3px #123b5510,0 5px 12px #00366a12;}
-#request .repair-form .home-button {grid-column:2;grid-row:2;min-height:54px;padding:14px 22px;border:1px solid #ffffff66;border-radius:14px;justify-content:center;gap:16px;background:linear-gradient(120deg,#fff,#e9f5ff);color:#075ca8!important;font-size:16px;box-shadow:0 8px 16px #00386426;}
-#request .repair-form .form-consent {grid-column:1/-1;grid-row:3;font-size:12px;line-height:1.5;gap:10px;margin:0;}
-#request .form-note {font-size:12px;line-height:1.4;margin:-8px 0 0;color:#d8ecff;}
-@media(max-width:540px){#request{padding:36px 0;}#request > .home-container{width:calc(100% - 36px);}#request .home-title{font-size:23px;margin-bottom:24px;}#request .repair-form{grid-template-columns:minmax(0,1fr);gap:16px;}#request .repair-form > .request-phone{grid-column:1;grid-row:2;}#request .repair-form .home-button{grid-column:1;grid-row:3;}#request .repair-form .form-consent{grid-row:4;}#request .form-note{margin:0;}}
-
-/* Refined compact request form with a clear green action. */
-#request {
-  background:
-    radial-gradient(ellipse 65% 100% at 52% 45%, #56baff30, transparent 85%),
-    linear-gradient(115deg, #0865af, #087bd4);
+/* Compact repair card. The supplied illustration remains unchanged. */
+#main-content #request{--request-ink:#101a3b;--request-blue:#0888ee;--request-border:#b8d4f6;padding:40px 0 44px;background:#dff1fe;color:var(--request-ink);border:0;font-family:Manrope,sans-serif}
+#request .request-card{display:grid;grid-template-columns:44.3% 55.7%;width:min(960px,calc(100% - 96px));margin:auto;overflow:hidden;isolation:isolate;container-type:inline-size;border:1.5px solid #fff;border-radius:28px;background:#fff;box-shadow:0 16px 30px #478dc83b}
+#request .request-visual{position:relative;min-width:0;min-height:62.8cqw;background:#dff1fe;overflow:hidden}
+#request .request-appliances{position:absolute;bottom:0;left:0;width:100%;height:auto;max-width:none}
+#request .request-copy{position:relative;z-index:1;padding:4.8cqw 3.3cqw 0}
+#main-content #request .request-copy h2{margin:0;color:var(--request-ink);font:800 4.7cqw/.99 Manrope,sans-serif;letter-spacing:-.045em}
+#request .request-copy p{margin:1.8cqw 0 0;font-size:2.28cqw;font-weight:500;line-height:1.2;letter-spacing:-.035em}
+#request .request-panel{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:4cqw 3cqw;background:#fff}
+#request .request-form-heading{margin:0 0 3cqw;color:var(--request-ink);font:800 2.65cqw/1.3 Manrope,sans-serif;letter-spacing:-.025em;text-align:center}
+#main-content #request .repair-form{display:flex;flex-direction:column;gap:0;margin:0}
+#request .request-fields{display:grid;grid-template-columns:minmax(0,1fr) 15cqw;gap:1.6cqw;align-items:center}
+#request .request-phone{display:block;min-width:0;margin:0}
+#main-content #request .repair-form input[type=tel]{display:block;appearance:none;width:100%;height:5.2cqw;min-height:48px;padding:1cqw 1.5cqw;border:1.5px solid var(--request-border);border-radius:12px;background:#fff;color:var(--request-ink);font:500 16px/1.4 Manrope,sans-serif;box-shadow:none}
+#request .request-phone input::placeholder{color:#5d6a89;opacity:1}
+#main-content #request .request-submit{display:flex;justify-content:center;align-items:center;width:100%;height:5.2cqw;min-height:48px;margin:0;padding:1cqw;border:0;border-radius:12px;background:#0b82e6;color:#fff;font:800 15px/1.3 Manrope,sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:none}
+#request .request-submit:hover{background:#0574d1}
+#main-content #request .request-consent{display:flex;flex-direction:row;align-items:flex-start;gap:10px;margin:2.2cqw 0 0;font:500 12px/1.6 Manrope,sans-serif;color:var(--request-ink);cursor:pointer}
+#request .request-consent input{appearance:none;flex:0 0 17px;width:17px;height:17px;margin:3px 0 0;border:1.5px solid #93adce;border-radius:3px;background:#fff;cursor:pointer}
+#request .request-consent input:checked{appearance:auto;accent-color:var(--request-blue)}
+#request .request-consent a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+#request #form-note{margin:16px 0 0;font-size:14px;color:#53617f}
+#request :is(input,button,a):focus-visible{outline:3px solid var(--request-blue);outline-offset:4px}
+@media(max-width:1100px) and (min-width:901px){#request .request-card{width:min(960px,calc(100% - 48px))}}
+@media(max-width:900px){
+#main-content #request{padding:28px 0}
+#request .request-card{display:block;width:calc(100% - 32px);border-radius:26px}
+#request .request-visual{height:133cqw;min-height:0}
+#request .request-appliances{bottom:-5cqw}
+#request .request-copy{padding:8cqw 7cqw 0}
+#main-content #request .request-copy h2{font-size:9.6cqw;line-height:1.04}
+#request .request-copy p{margin-top:4cqw;font-size:5cqw}
+#request .request-panel{padding:8cqw 5.5cqw}
+#request .request-form-heading{margin-bottom:6cqw;font-size:6.3cqw}
+#request .request-fields{grid-template-columns:1fr;gap:4cqw}
+#main-content #request .repair-form input[type=tel],#main-content #request .request-submit{height:14cqw;min-height:48px;padding:3cqw 4cqw;font-size:16px}
+#main-content #request .request-consent{margin-top:5cqw;font-size:12px}
 }
-#request .home-title { margin-bottom: 22px; }
-#request .repair-form input:not([type=checkbox]),
-#request .repair-form select { border-radius: 12px; }
-#request .repair-form .home-button {
-  background: linear-gradient(115deg, #2ec639, #22ac30);
-  border-color: #ffffff40;
-  color: #fff !important;
-  text-transform: none;
-  box-shadow: inset 0 1px 0 #ffffff40, 0 7px 14px #00365d24;
-  font-size: 15px;
-  padding-inline: 16px;
-  gap: 10px;
+/* Quiet reassurance row, aligned with the form rather than extra tiles. */
+#request .request-assurances{display:grid;grid-template-columns:1fr 1fr;margin-top:36px;padding-top:23px;border-top:1px solid #bed9ef;gap:20px}
+#request .request-assurance{display:flex;align-items:center;gap:12px;min-width:0;color:#172746;font:600 15px/1.45 Manrope,sans-serif;letter-spacing:-.02em}
+#request .request-assurance+ .request-assurance{padding-left:20px;border-left:1px solid #bed9ef}
+#request .request-assurance svg{flex:0 0 34px;width:34px;height:34px;fill:none;stroke:#278de0;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){
+#request .request-assurances{margin-top:28px;padding-top:20px;gap:12px}
+#request .request-assurance{gap:8px;font-size:13px}
+#request .request-assurance+ .request-assurance{padding-left:12px}
+#request .request-assurance svg{flex-basis:29px;width:29px;height:29px}
 }
-#request .repair-form .home-button:hover {
-  background: linear-gradient(115deg, #29b834, #1f9e2c);
+/* Submit follows the consent in both visual and keyboard order. */
+#request .request-fields{grid-template-columns:minmax(0,1fr)}
+#main-content #request .request-submit{margin-top:20px}
+/* A diagonal background band; the card stays level and crosses its edges. */
+#main-content #request{position:relative;isolation:isolate;overflow:visible;padding-block:76px;background:#fff}
+#main-content #request::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:#dff1fe;clip-path:polygon(0 18%,100% 0,100% 82%,0 100%)}
+#request .request-card{position:relative;z-index:1;box-shadow:0 22px 42px -12px #367bb545,0 4px 12px #367bb510}
+@media(max-width:900px){
+#main-content #request{padding-block:40px}
+#main-content #request::before{clip-path:polygon(0 7%,100% 0,100% 93%,0 100%)}
 }
-#request .repair-form .form-consent { color: #deedfb; line-height: 1.5; align-items: flex-start; }
-#request .form-consent input[type=checkbox] {
-  flex: 0 0 auto;
-  width: 16px;
-  height: 16px;
-  margin: 1px 0 0;
-  accent-color: #2ec639;
+/* Continue the neighbouring pale-blue backdrop through the diagonal cutouts. */
+#main-content #request{background:linear-gradient(135deg,#f3f9ff,#e7f2fe 52%,#edf7ff)}
+/* One page-aligned backdrop prevents straight seams at section boundaries. */
+#main-content .company-group,
+#main-content #request,
+#main-content #articles,
+#main-content #locations{background:linear-gradient(135deg,#f3f9ff,#e7f2fe 52%,#edf7ff);background-attachment:fixed}
+#main-content .company-group #management{background:transparent}
+/* The offer lives on the left; the right explains the next action. */
+#request .request-form-heading{text-align:left;font-size:30px;line-height:1.2;margin-bottom:12px;letter-spacing:-.035em}
+#request .request-form-intro{margin:0 0 26px;max-width:390px;color:#596b83;font:400 16px/1.55 Manrope,sans-serif}
+#main-content #request .request-submit{text-transform:none;font-size:16px}
+@media(max-width:900px){
+#request .request-form-heading{font-size:clamp(24px,6.5cqw,30px)}
+#request .request-form-intro{font-size:15px;margin-bottom:22px}
 }
-#request .form-note { color: #c1dcf1; font-weight: 400; }
-
-/* Keep the submit label on one line and match the phone field height. */
-#request .repair-form { grid-template-columns: minmax(0, 1fr) 214px; }
-#request .repair-form .home-button {
-  height: 54px;
-  min-height: 54px;
-  white-space: nowrap;
-  padding: 12px 16px;
-  font-size: 14px;
-  gap: 10px;
+/* Centred form introduction and a single, quiet benefits strip. */
+#request .request-form-heading{text-align:center}
+#request .request-form-intro{text-align:center;margin-inline:auto;max-width:410px}
+#request .request-assurances{margin-top:28px;padding:18px 16px;border:1px solid #e0eefb;border-radius:16px;background:linear-gradient(120deg,#f3faff,#edf6ff);gap:16px;box-shadow:inset 0 1px 0 #ffffffc9}
+#request .request-assurance{gap:11px;font-size:14px;line-height:1.45;font-weight:600}
+#request .request-assurance+ .request-assurance{padding-left:16px;border-left-color:#ccdfef}
+#request .request-assurance svg{box-sizing:content-box;flex:0 0 29px;width:29px;height:29px;padding:9px;background:#fff;border:1px solid #e2effa;border-radius:13px;stroke:#278de0;stroke-width:1.7;box-shadow:0 3px 8px #407aab0a}
+@media(max-width:900px){
+#request .request-assurances{padding:15px 10px;gap:10px}
+#request .request-assurance{gap:8px;font-size:12px}
+#request .request-assurance+ .request-assurance{padding-left:10px}
+#request .request-assurance svg{flex-basis:24px;width:24px;height:24px;padding:6px;border-radius:10px}
 }
-#request .repair-form .home-button svg { width: 20px; height: 20px; flex-shrink: 0; }
-@media(max-width:540px) {
-  #request .repair-form { grid-template-columns: minmax(0, 1fr); }
+/* Tighter transitions around the request card, preserving the slanted band. */
+#main-content .company-group #management{padding-bottom:28px}
+#main-content #request{padding-top:32px;padding-bottom:28px}
+#main-content #articles{padding-top:24px}
+@media(max-width:900px){
+#main-content .company-group #management{padding-bottom:20px}
+#main-content #request{padding-top:24px;padding-bottom:24px}
+#main-content #articles{padding-top:20px}
 }
-
-/* A little more breathing room around the compact form. */
-#request { padding-block: 58px; }
-#request .home-title { margin-bottom: 28px; }
-#request .repair-form { row-gap: 24px; column-gap: 26px; }
-#request .form-note { margin-top: 0; }
-@media(max-width:540px) {
-  #request { padding-block: 44px; }
-  #request .home-title { margin-bottom: 26px; }
-  #request .repair-form { row-gap: 20px; }
-}
+/* Let leadership shadows paint over the next section's background. */
+#main-content #management{position:relative;z-index:1}

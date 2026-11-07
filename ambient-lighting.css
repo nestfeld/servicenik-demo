@@ -1,0 +1,132 @@
+/* Each content group owns its lighting; gradients never restart inside it. */
+#main-content .company-group{
+ background:
+  linear-gradient(to top,#eaf4ff 0px,#eaf4ff00 180px),
+  radial-gradient(ellipse 70% 30% at 8% 14%,#ffffffde,transparent 85%),
+  radial-gradient(ellipse 58% 30% at 100% 40%,#278de026,transparent 85%),
+  radial-gradient(ellipse 48% 24% at 5% 52%,#ffffffdf,transparent 88%),
+  radial-gradient(ellipse 68% 30% at 32% 76%,#488dcd24,transparent 90%),
+  linear-gradient(160deg,#f1f9ff,#fbfdff 38%,#f3f8fd 70%,#eaf4ff);
+}
+#main-content .resources-group{
+ background:
+  linear-gradient(to bottom,#eaf4ff 0px,#eaf4ff00 180px),
+  radial-gradient(ellipse 70% 35% at 94% 20%,#aad5fc66,transparent 88%),
+  radial-gradient(ellipse 65% 38% at 4% 44%,#ffffffb3,transparent 86%),
+  radial-gradient(ellipse 65% 32% at 65% 88%,#c7d8ff59,transparent 90%),
+  linear-gradient(155deg,#eaf4ff,#e1f0ff 46%,#eff7ff);
+}
+#main-content .resources-group #articles,
+#main-content .resources-group #locations{background:transparent}
+#main-content #request{background:#eaf4ff}
+#main-content #articles .home-article{
+ border:1px solid #fffffff2;
+ background:linear-gradient(145deg,#fffffffc,#f8fcfff2);
+ box-shadow:inset 0 1px 0 #fff,0 3px 7px #356b9810,0 16px 26px -14px #397dbb4d,0 30px 48px -30px #5086c047;
+}
+#main-content #articles .article-media{
+ background:radial-gradient(ellipse at 28% 12%,#ffffffed,#ffffff00 70%),linear-gradient(135deg,#e6f4ff,#c6e2fc);
+ box-shadow:inset 0 1px 0 #fff,inset 0 -12px 24px -18px #719ed938;
+}
+#main-content #locations>.home-container{
+ background:linear-gradient(135deg,#ffffffef,#f4faffed);
+ border:1px solid #fffffff0;
+ box-shadow:inset 0 1px 0 #fff,0 4px 12px #376b9b0a,0 22px 46px -22px #2d70af4d,0 40px 70px -44px #687dc933;
+}
+#main-content #locations .home-section-top{
+ background:radial-gradient(ellipse at 12% 0%,#ffffffeb,#ffffff00 76%),linear-gradient(120deg,#f8fcffbf,#e7f3ff80);
+ border-radius:inherit;
+}
+#main-content #locations .network-map{
+ background:linear-gradient(125deg,#f8fcff,#e6f2ff);
+ box-shadow:inset 0 1px 0 #fff,0 6px 16px -12px #3174b333;
+}
+@media(hover:hover) and (pointer:fine){
+ #main-content #articles .home-article:hover{box-shadow:inset 0 1px 0 #fff,0 4px 10px #356b9814,0 20px 34px -16px #397dbb59,0 34px 56px -30px #5086c047}
+}
+/* Stronger colour separates the diagonal band from the ambient sections. */
+#main-content #request::before{
+ background:radial-gradient(ellipse at 22% 18%,#b9e2ff99,transparent 65%),linear-gradient(115deg,#c3e3fc,#9ecbf4 55%,#b6dcfb);
+ clip-path:polygon(0 23%,100% 0,100% 77%,0 100%);
+}
+@media(max-width:900px){#main-content #request::before{clip-path:polygon(0 9%,100% 0,100% 91%,0 100%)}}
+/* Give the company section more breathing room after the reviews. */
+#main-content .company-group #advantages{padding-top:88px}
+@media(max-width:760px){#main-content .company-group #advantages{padding-top:56px}}
+/* Three fluid SVG layers join reviews to the company section. */
+#main-content #reviews{position:relative;padding-bottom:80px}
+#reviews .reviews-wave{position:absolute;display:block;left:0;bottom:-1px;width:100%;height:84px;fill:none;stroke:none;pointer-events:none;z-index:0}
+#reviews>.home-container{position:relative;z-index:1}
+#main-content .company-group{
+ background:
+  linear-gradient(to bottom,#f1f9ff 0px,#f1f9ff00 170px),
+  linear-gradient(to top,#eaf4ff 0px,#eaf4ff00 180px),
+  radial-gradient(ellipse 70% 30% at 8% 14%,#ffffffde,transparent 85%),
+  radial-gradient(ellipse 58% 30% at 100% 40%,#278de026,transparent 85%),
+  radial-gradient(ellipse 48% 24% at 5% 52%,#ffffffdf,transparent 88%),
+  radial-gradient(ellipse 68% 30% at 32% 76%,#488dcd24,transparent 90%),
+  linear-gradient(160deg,#f1f9ff,#fbfdff 38%,#f3f8fd 70%,#eaf4ff);
+}
+@media(max-width:760px){#main-content #reviews{padding-bottom:64px}#reviews .reviews-wave{height:58px}}
+/* On phones, article previews read as a compact, scannable list. */
+@media(max-width:600px){
+ #main-content #articles .home-section-top{margin-bottom:20px;gap:12px}
+ #main-content #articles .article-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+ #main-content #articles .home-article{border-radius:20px;box-shadow:inset 0 1px 0 #fff,0 10px 22px -14px #397dbb4d}
+ #main-content #articles .home-article>a{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;gap:14px;min-height:138px;height:100%;padding:12px;border-radius:20px}
+ #main-content #articles .article-media{grid-row:auto;width:96px;height:104px;aspect-ratio:auto;border-radius:14px}
+ #main-content #articles .article-media img{width:100%;height:100%;padding:6px;object-fit:contain}
+ #main-content #articles .article-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;padding:0}
+ #main-content #articles .article-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;margin:0;font-size:16px;line-height:1.35;letter-spacing:-.02em}
+ #main-content #articles .article-copy p{display:none}
+ #main-content #articles .article-arrow{width:22px;height:22px;margin-top:8px;background:transparent;box-shadow:none}
+ #main-content #articles .article-arrow svg{width:20px;height:20px;margin:0}
+}
+@media(max-width:360px){
+ #main-content #articles .home-article>a{grid-template-columns:80px minmax(0,1fr);gap:11px;padding:11px}
+ #main-content #articles .article-media{width:80px;height:94px}
+ #main-content #articles .article-title{font-size:15px}
+}
+/* Larger article heading on mobile, without crowding the all-articles link. */
+@media(max-width:600px){
+ #main-content #articles .home-section-top{flex-wrap:wrap;row-gap:12px}
+ #main-content #articles .home-title{font-size:clamp(28px,7.5vw,34px);line-height:1.18;letter-spacing:-.035em;white-space:normal}
+}
+/* More room below review pagination on phones, before the wave. */
+@media(max-width:760px){#main-content #reviews{padding-bottom:104px}}
+/* A balanced, centred heading stack for the mobile reviews carousel. */
+@media(max-width:600px){
+ #main-content #reviews{padding-top:32px}
+ #main-content #reviews .reviews-heading-row{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+ #main-content #reviews .home-title{margin:0 0 10px;font-size:30px;line-height:1.12;letter-spacing:-.04em;-webkit-text-stroke:0;text-align:center}
+ #reviews .reviews-title-tail{display:block}
+ #main-content #reviews .reviews-hint{max-width:260px;margin:0 auto;font-size:14px;line-height:1.45;color:#58708a;text-align:center}
+ #main-content #reviews .review-action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:0;padding:10px 20px;border:1px solid #a9cfee;border-radius:13px;background:#ffffffb3;font-size:14px;font-weight:700;line-height:1.3;box-shadow:inset 0 1px 0 #fff,0 5px 12px -8px #3a77ad33}
+ #main-content #reviews .reviews-stage{margin-top:0}
+ #main-content #reviews .review-card{top:22px}
+}
+#main-content #reviews .reviews-title-tail{color:inherit;background:none;-webkit-text-fill-color:currentColor}
+@media(max-width:600px){#main-content #reviews .reviews-hint{display:none}}
+/* Airier spacing within the leadership contact card. */
+#main-content #management .management-contact-panel{padding:30px 26px;gap:22px}
+#main-content #management .management-contact-panel .home-intro{line-height:1.55}
+#main-content #management .management-contact-panel .director-contact{gap:28px;margin-top:4px}
+#main-content #management .management-contact-panel .director-contact p{margin-top:14px;line-height:1.55;padding-left:12px}
+@media(max-width:600px){#main-content #management .management-contact-panel{padding:30px 24px;gap:22px}}
+/* Readable service introduction on small screens. */
+@media(max-width:600px){
+ #main-content #services .home-title{font-size:clamp(32px,9vw,38px);line-height:1.15;letter-spacing:-.04em;white-space:normal;text-wrap:balance}
+ #main-content #services .catalog-heading-row{gap:20px}
+ #main-content #services .catalog-heading-row>p{font-size:20px;line-height:1.5;padding-left:16px}
+}
+@media(max-width:600px){#main-content #services .catalog-heading-row>p{display:none}}
+@media(max-width:600px){#main-content #services .catalog-heading-row{align-items:center}#main-content #services .home-title{width:100%;text-align:center}}
+/* Lift the team panel with a soft contact shadow and reflected blue light. */
+#main-content .company-group #team.team-section>.home-container{
+ background:radial-gradient(ellipse at 90% 0%,#ffffff 0%,#ffffff00 62%),linear-gradient(140deg,#ffffff 45%,#f0f8ff 78%,#e2f0fd);
+ border-color:#ffffff;
+ box-shadow:inset 0 2px 0 #ffffff,inset 0 -1px 0 #b6d5ee66,0 3px 7px #234b700a,0 12px 20px -13px #235f9830,0 22px 36px -25px #326d9b2e;
+}
+@media(max-width:600px){
+ #main-content .company-group #team.team-section>.home-container{box-shadow:inset 0 2px 0 #fff,inset 0 -1px 0 #b6d5ee66,0 3px 6px #234b7008,0 10px 18px -12px #235f982b,0 18px 28px -22px #326d9b24}
+}

@@ -1,0 +1,29 @@
+/* Mobile address cards use the original table data and links. */
+#locations .address-more{display:none}
+@media(max-width:760px){
+ #main-content #locations .table-hint{display:none}
+ #main-content #locations .home-section-top{padding:24px 16px 20px}
+ #main-content #locations .home-title{font-size:28px;line-height:1.18;letter-spacing:-.035em}
+ #main-content #locations .address-filters{grid-template-columns:minmax(0,1fr);gap:10px}
+ #main-content #locations .address-scroll{max-height:none;overflow:visible;border:0;scrollbar-gutter:auto;padding:0 14px}
+ #main-content #locations .address-table{display:block;min-width:0;width:100%;table-layout:auto;font-size:15px}
+ #locations .address-table colgroup{display:none}
+ #main-content #locations .address-table tbody{display:grid;gap:14px}
+ #main-content #locations .address-table tbody tr{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0;padding:18px 16px;border:1px solid #dbeaf7;border-radius:18px;background:linear-gradient(140deg,#fff,#f8fcff);box-shadow:0 8px 18px -15px #2b6da64d}
+ #main-content #locations .address-table tbody tr[hidden],#main-content #locations.has-mobile-addresses .address-table tbody tr.mobile-address-extra{display:none}
+ #main-content #locations .address-table tbody tr>td,#main-content #locations .address-table tbody tr>th{display:block;min-width:0;width:auto;margin:0;padding:0;border:0;background:transparent}
+ #main-content #locations .address-table tbody th{font:700 17px/1.4 Manrope,sans-serif;letter-spacing:-.025em;color:#14233e;overflow-wrap:anywhere}
+ #main-content #locations .address-table small{display:block;margin-top:7px;color:#63778b;font:400 13px/1.5 Manrope,sans-serif;letter-spacing:0}
+ #main-content #locations .branch-type{display:inline-flex;max-width:100%;padding:5px 9px;border-radius:8px;background:#eaf7ef;color:#34704c;font:600 12px/1.4 Manrope,sans-serif}
+ #main-content #locations .branch-type.spot{background:#eaf4ff;color:#2873ad}
+ #main-content #locations .branch-phone{display:inline-flex;align-items:center;min-height:36px;font:800 19px/1.4 Manrope,sans-serif;letter-spacing:-.025em;color:#1878c5}
+ #main-content #locations .branch-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;font-size:13px;line-height:1.4}
+ #main-content #locations .branch-social a{display:inline-flex;align-items:center;justify-content:center;min-height:36px;max-width:100%;padding:7px 9px;border:1px solid #e0ecf7;border-radius:9px;background:#f1f8ff;text-decoration:none;overflow-wrap:anywhere}
+ #main-content #locations .branch-social a[href^="mailto:"]{justify-content:flex-start;flex-basis:100%;padding:3px 0;min-height:30px;border:0;background:transparent;word-break:break-word}
+ #main-content #locations .branch-social .branch-max{color:#7c8fa2;background:#f5f8fb}
+ #main-content #locations .map-link{display:flex;justify-content:center;gap:10px;width:100%;min-height:44px;margin-top:1px;padding:11px 14px;border:1px solid #c8e0f5;border-radius:11px;background:#edf6ff;color:#1876bf!important;font:700 14px/1.4 Manrope,sans-serif}
+ #main-content #locations .map-link svg{display:block;width:17px;height:17px}
+ #main-content #locations .address-more:not([hidden]){display:flex;align-items:center;justify-content:center;width:calc(100% - 28px);min-height:48px;margin:18px 14px 8px;padding:12px;border:1px solid #b8d7f1;border-radius:13px;background:#eaf5ff;color:#1675c0;font:700 15px/1.4 Manrope,sans-serif;cursor:pointer}
+ #main-content #locations .address-more:hover{background:#dcefff}
+ #main-content #locations .network-map{margin:20px 14px 0}
+}
