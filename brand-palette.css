@@ -1,0 +1,110 @@
+/* Shared brand palette. Heading gradient is taken verbatim from “О Сервиснике”. */
+:root{
+ --site-blue:#278de0;--site-blue-muted:#488dcd;--site-link:#226bb8;--site-green:#3fbb5b;
+ --site-heading-gradient:linear-gradient(115deg,#3c9de6 0%,#278de0 62%,#2484d5 100%);
+ --site-button-gradient:linear-gradient(115deg,#237bbf,#226bb8 78%);
+ --site-green-gradient:linear-gradient(115deg,#168438,#137633);
+ --site-button-shadow:inset 0 1px 0 #ffffff40,0 8px 18px #488dcd26;
+ --home-blue:#488dcd;--home-green:#3fbb5b;
+}
+/* Existing gradient headings share the same gentle transition; typography stays intact. */
+.hero h1 span,.about-copy h2 span,#services .home-title span,#advantages .home-title{
+ background-image:var(--site-heading-gradient);background-clip:text;-webkit-background-clip:text;
+ color:var(--site-blue);-webkit-text-fill-color:transparent;
+}
+/* White labels use the site's existing deeper blue button shades for contrast. */
+.header .callback,.about-copy>.button,.hero .hero-actions .city-control,
+.home-button,.home-dialog .button,dialog .button,
+#advantages .status-link,
+#management .management-contact-panel .director-contact>div:first-child .home-outline{
+ background:var(--site-button-gradient);border-color:#488dcd66;color:#fff!important;box-shadow:var(--site-button-shadow);
+}
+.header .callback:hover,.about-copy>.button:hover,.hero .hero-actions .city-control:hover,
+.home-button:hover,.home-dialog .button:hover,dialog .button:hover,
+#advantages .status-link:hover,
+#management .management-contact-panel .director-contact>div:first-child .home-outline:hover{
+ background:var(--site-button-gradient);color:#fff!important;border-color:#488dcda6;
+ box-shadow:inset 0 1px 0 #ffffff59,0 10px 22px #488dcd38;
+}
+/* Keep the existing green actions, using the same restrained green in both places. */
+.catalog-request-button,#request .repair-form .home-button{
+ background:var(--site-green-gradient);border-color:#3fbb5b66;color:#fff!important;
+ box-shadow:inset 0 1px 0 #ffffff40,0 8px 18px #3fbb5b24;
+}
+.catalog-request-button:hover,#request .repair-form .home-button:hover{
+ background:var(--site-green-gradient);color:#fff!important;border-color:#3fbb5ba6;
+ box-shadow:inset 0 1px 0 #ffffff59,0 10px 22px #3fbb5b33;
+}
+#request{
+ background:radial-gradient(ellipse 65% 100% at 52% 45%,#488dcd30,transparent 85%),linear-gradient(115deg,#103c65,#103c65);
+}
+#request .form-consent input[type=checkbox]{accent-color:var(--site-green)}
+/* Secondary buttons remain white and pale blue, with a readable brand-blue label. */
+#articles .home-outline,#reviews .review-action,
+#management .management-contact-panel .director-contact>div:last-child .home-outline,
+#locations .network-map .home-outline{
+ color:var(--site-link)!important;border-color:#488dcd80;background:linear-gradient(135deg,#fff,#eef6fd);
+}
+#articles .home-outline:hover,#reviews .review-action:hover,
+#management .management-contact-panel .director-contact>div:last-child .home-outline:hover,
+#locations .network-map .home-outline:hover{background:linear-gradient(135deg,#fff,#e3f0fb);color:var(--site-link)!important}
+#locations .map-link{background:#eef6fd;color:var(--site-link)!important;border-color:#488dcd4d}
+#locations .map-link:hover{background:var(--site-button-gradient);color:#fff!important;border-color:#488dcd80}
+/* Small accents and hover states use the same two brand families. */
+#reviews{--review-accent:var(--site-blue)}
+#articles{--article-blue:var(--site-blue)}
+#reviews .review-open,#reviews .review-original,#locations .branch-phone{color:var(--site-link)}
+#reviews .review-dots [aria-current="true"] span::after{background:var(--site-blue)}
+#reviews .review-dots button:hover span::after{background:var(--site-link)}
+#reviews .review-quote{color:var(--site-blue)}
+#articles .home-article>a:hover .article-arrow{background:var(--site-button-gradient);color:white}
+#articles .home-article>a:hover .article-title{color:var(--site-link)}
+.services-section .device-arrow{color:var(--site-blue)}
+.services-section .device:focus-visible .device-arrow{background:var(--site-button-gradient);border-color:#488dcd80;color:white}
+@media(hover:hover) and (pointer:fine){.services-section .device:hover .device-arrow{background:var(--site-button-gradient);border-color:#488dcd80;color:white}}
+.services-section .device-grid::before{background:linear-gradient(140deg,#b9e8be,#88d393)}
+#advantages .advantage-copy::before{background:var(--site-blue);box-shadow:0 3px 8px #488dcd26}
+#advantages .advantage-card:last-child .advantage-copy::before,#team .home-intro::before{background:var(--site-green);box-shadow:0 3px 8px #3fbb5b26}
+.company-group #team.team-section>.home-container::after{
+ background:radial-gradient(ellipse 38% 60% at 100% 0%,#278de0a6 0%,#488dcd59 38%,transparent 78%);
+}
+#locations .address-table tbody tr[data-type="branch"]{border-left-color:var(--site-green)}
+#locations .address-table tbody tr[data-type="spot"]{border-left-color:var(--site-blue-muted)}
+#locations .branch-social a:not([aria-disabled="true"]){color:var(--site-link)}
+#locations .address-filters select:focus-visible,#locations .map-link:focus-visible,
+#articles .home-article>a:focus-visible,#management .management-contact-panel button:focus-visible{outline-color:var(--site-blue-muted)}
+/* Match the reference button through the older, more specific about-section rules. */
+.about .about-copy>.button,.about .about-copy>.button:hover{
+ background:var(--site-button-gradient);color:#fff!important;box-shadow:var(--site-button-shadow);
+}
+.about-copy>.button::before{box-shadow:0 0 0 1px #488dcd59,0 0 24px #488dcd33,0 10px 30px #488dcd26}
+.hero .city-control::before{box-shadow:0 0 0 1px #488dcd59,0 0 24px #488dcd33,0 10px 30px #488dcd26}
+.header .mobile-addresses,.header .nav-addresses{border-color:var(--site-green)}
+.city-control .choices__list--dropdown .choices__item.is-selected{background:#3fbb5b14}
+/* Quiet brand-blue separators, including the older bright benefits divider. */
+:root{--site-divider:#488dcd66}
+.catalog-heading-row>p,.hero-actions .socials{border-left-color:var(--site-divider)}
+#advantages .advantages-heading .home-intro{border-left-color:var(--site-divider)}
+#advantages .advantages-heading .home-intro::before{background:var(--site-divider)}
+/* Light request band in the same palette as the adjacent sections. */
+#request{
+ color:#00051d;
+ background:radial-gradient(ellipse at 50% 0%,#ffffffeb,transparent 72%),linear-gradient(115deg,#edf6ff,#e4f0fc 60%,#edf7ff);
+ border-block:1px solid #d5e6f6;
+}
+#request .home-title{color:#00051d}
+#request .repair-form input:not([type=checkbox]),#request .repair-form select{color:#18334c;border-color:#bfd7ee;box-shadow:inset 0 1px 2px #488dcd0d,0 5px 12px #488dcd0d}
+#request .repair-form .form-consent{color:#526477}
+#request .form-consent a{color:var(--site-link);text-underline-offset:3px}
+#request .form-note{color:#526477}
+/* A deep blue band, lighter than the previous navy treatment. */
+#request{
+ color:#fff;
+ background:radial-gradient(ellipse 75% 120% at 50% 0%,#ffffff1f,transparent 78%),linear-gradient(115deg,#237bbf,#226bb8 78%);
+ border-block-color:#488dcd66;
+}
+#request .home-title{color:#fff}
+#request .repair-form .form-consent,#request .form-note{color:#e5f1fc}
+#request .form-consent a{color:#fff}
+/* Keep only the opening word dark in the gradient benefits heading. */
+#advantages .home-title .advantages-title-first{color:#00051d;-webkit-text-fill-color:#00051d;background:none}

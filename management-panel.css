@@ -1,0 +1,58 @@
+/* The contact introduction is a separate panel, styled like the repair-status panel. */
+#management>.home-container{grid-template-columns:minmax(350px,1.05fr) minmax(0,2.55fr);column-gap:32px;row-gap:24px}
+#management .management-contact-panel{
+ grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:18px;min-width:0;padding:28px 24px;
+ border:1px solid #d5e8fa;border-top:2px solid #b4d9ff;border-radius:24px;
+ background:radial-gradient(ellipse at 0% 0%,#ffffffed,transparent 70%),linear-gradient(115deg,#fff,#f4faff 65%,#e7f3ff);
+ box-shadow:inset 0 1px 0 #fff,0 5px 10px #234b7010,0 22px 36px -14px #326d9b33;
+ color:#00051d;
+}
+#management .management-contact-panel .home-title{max-width:none;margin:0;font-size:clamp(32px,2.8vw,40px);line-height:1.14}
+#management .management-contact-panel .home-intro{max-width:none;margin:0;font-size:15px;line-height:1.45;color:#526477}
+#management .management-contact-panel .director-contact{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin:0;padding:0}
+#management .management-contact-panel .director-contact .home-outline{min-height:48px;padding:12px 16px;border-radius:15px;font-size:14px;line-height:1.35}
+#management .management-contact-panel .director-contact>div:first-child .home-outline{
+ border:1px solid #409dff;background:linear-gradient(125deg,#008cff,#0064ff);box-shadow:inset 0 1px 0 #ffffff36,0 9px 18px #1d6cba24;
+}
+#management .management-contact-panel .director-contact>div:last-child .home-outline{border-color:#a9cff4;background:#ffffffa8;color:#1263b0!important;box-shadow:inset 0 1px 0 #fff}
+#management .management-contact-panel .director-contact p{margin:10px 0 0;padding-left:10px;border-left-color:#b6d5ef;font-size:12px;line-height:1.45;color:#62758a}
+#management .management-contact-panel button:focus-visible{outline:3px solid #0875ec;outline-offset:4px}
+#management .people-grid{grid-column:2;grid-row:1;align-self:start}
+@media(max-width:1100px){
+ #management>.home-container{grid-template-columns:minmax(0,1fr);gap:28px}
+ #management .management-contact-panel,#management .people-grid{grid-column:1;grid-row:auto}
+ #management .management-contact-panel{padding:28px;gap:20px}
+ #management .management-contact-panel .home-title{font-size:clamp(32px,3vw,40px)}
+ #management .management-contact-panel .home-intro{max-width:720px;font-size:16px}
+ #management .management-contact-panel .director-contact{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ #management .management-contact-panel .director-contact p{font-size:13px}
+}
+@media(max-width:600px){
+ #management .management-contact-panel{padding:26px 22px;border-radius:22px}
+ #management .management-contact-panel .home-title{font-size:32px}
+ #management .management-contact-panel .director-contact{grid-template-columns:minmax(0,1fr);gap:22px}
+ #management .management-contact-panel .director-contact .home-outline{min-height:50px;font-size:15px}
+ #management .management-contact-panel .director-contact p{font-size:13px;line-height:1.5}
+}
+/* Let the portrait row follow the contact panel's natural height. */
+@media(min-width:1101px){
+ #management .people-grid{align-self:stretch;align-items:stretch}
+ #management .people-grid .person{display:flex;flex-direction:column;min-height:0}
+ #management .people-grid .person img{flex:1 1 0;min-height:0;height:0;object-fit:cover;object-position:center 16%}
+ #management .people-grid .person figcaption{flex:0 0 auto;min-height:116px}
+}
+/* One surface treatment for the contact panel and the three portrait cards. */
+#management{
+ --leadership-surface:radial-gradient(ellipse at 0% 0%,#ffffffed,transparent 70%),linear-gradient(115deg,#fff,#f4faff 65%,#e7f3ff);
+ --leadership-shadow:inset 0 1px 0 #fff,0 5px 10px #234b7010,0 22px 36px -14px #326d9b33;
+}
+.company-group #management .management-contact-panel,
+.company-group #management .people-grid .person{
+ border:1px solid #d5e8fa;border-top:2px solid #b4d9ff;border-radius:24px;
+ background:var(--leadership-surface);box-shadow:var(--leadership-shadow);
+}
+#management .people-grid .person figcaption{background:transparent}
+@media(max-width:600px){
+ .company-group #management .management-contact-panel,
+ .company-group #management .people-grid .person{border-radius:22px}
+}

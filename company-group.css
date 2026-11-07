@@ -1,0 +1,74 @@
+/* Continuous company area with the advantages section's light background. */
+.company-group {
+  background: linear-gradient(125deg, #f7fbff, #edf6ff);
+}
+.company-group #advantages,
+.company-group #team,
+.company-group #management { background: transparent; }
+.company-group #advantages { padding-bottom: 48px; }
+.company-group #team { padding-top: 32px; padding-bottom: 48px; }
+.company-group #management { padding-top: 40px; }
+@media(max-width:600px) {
+  .company-group #advantages { padding-bottom: 28px; }
+  .company-group #team { padding-top: 24px; padding-bottom: 28px; }
+  .company-group #management { padding-top: 28px; }
+}
+
+/* Soft local lighting stays inside the shared company background. */
+.company-group #advantages {
+  background: radial-gradient(ellipse at 10% 25%, #ffffffd9, transparent 56%),
+    radial-gradient(ellipse at 90% 60%, #b7dfff33, transparent 58%);
+}
+.company-group #team {
+  background: radial-gradient(ellipse at 50% 50%, #c0ddf533, transparent 68%);
+}
+.company-group #team > .home-container {
+  background: radial-gradient(ellipse at 12% 0%, #ffffffd9, transparent 65%),
+    linear-gradient(125deg, #f1f8ff, #e2f0ff);
+  border-color: #ffffffc9;
+  box-shadow: inset 0 1px 0 #fff, 0 4px 10px #346e9b08,
+    0 22px 42px -18px #346e9b35;
+}
+.company-group #management {
+  background: radial-gradient(ellipse at 75% 38%, #ffffffb3, transparent 62%),
+    radial-gradient(ellipse at 15% 65%, #b7dfff26, transparent 54%);
+}
+.company-group #management .person {
+  background: radial-gradient(ellipse at 30% 0%, #ffffff99, transparent 68%),
+    linear-gradient(160deg, #e0efff, #f9fcff 78%);
+  box-shadow: inset 0 1px 0 #fff, 0 4px 8px #346e9b09,
+    0 20px 34px -12px #346e9b30;
+}
+.company-group #advantages .advantage-card {
+  box-shadow: inset 0 1px 0 #fff, 0 4px 8px #234b7009,
+    0 20px 34px -12px #326d9b30;
+}
+
+/* Ambient depth across the continuous company backdrop. */
+.company-group {
+  background:
+    radial-gradient(ellipse 65% 28% at 8% 8%, #ffffffed, #ffffff00 100%),
+    radial-gradient(ellipse 55% 32% at 100% 35%, #bbdcf552, #bbdcf500 100%),
+    radial-gradient(ellipse 60% 28% at 22% 66%, #ffffffb3, #ffffff00 100%),
+    radial-gradient(ellipse 55% 26% at 86% 93%, #c1dff54d, #c1dff500 100%),
+    linear-gradient(135deg, #f5faff, #eaf4fe 48%, #edf7ff);
+}
+
+/* A soft white light behind the team introduction. */
+.company-group #team {
+  background: radial-gradient(ellipse 65% 90% at 87% 42%, #ffffffeb 0%, #ffffff99 42%, #ffffff00 100%),
+    radial-gradient(ellipse at 50% 50%, #c0ddf51a, transparent 68%);
+}
+
+/* Continuous lighting: section backgrounds cannot create horizontal seams. */
+.company-group {
+  background:
+    radial-gradient(ellipse 65% 20% at 87% 58%, #fffffff0 0%, #ffffff99 42%, #ffffff00 100%),
+    radial-gradient(ellipse 65% 28% at 8% 8%, #ffffffed, #ffffff00 100%),
+    radial-gradient(ellipse 55% 32% at 100% 30%, #bbdcf533, #bbdcf500 100%),
+    radial-gradient(ellipse 55% 26% at 86% 93%, #c1dff533, #c1dff500 100%),
+    linear-gradient(135deg, #f5faff, #edf6fe 48%, #f1f8ff);
+}
+.company-group #advantages,
+.company-group #team,
+.company-group #management { background: transparent; }

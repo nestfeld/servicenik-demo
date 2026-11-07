@@ -1,0 +1,168 @@
+/* Bounded team panel, matching the light blue site palette. */
+#team {padding:64px 0;background:#fff;}
+#team > .home-container {width:calc(100% - 96px);max-width:1288px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 56px;padding:40px;background:linear-gradient(125deg,#f1f8ff,#e2f0ff);border:1px solid #e1eef9;border-radius:32px;box-shadow:0 16px 40px #346e9b0d;overflow:hidden;}
+#team .home-title {width:auto;max-width:none;margin:0;align-self:center;font-size:clamp(30px,3vw,44px);line-height:1.15;letter-spacing:-.035em;}
+#team .home-intro {width:auto;max-width:520px;margin:0;padding:0;align-self:center;font-size:18px;line-height:1.6;color:#52677d;}
+#team .whole-team {grid-column:1/-1;display:block;width:100%;height:auto;min-height:0;aspect-ratio:1.9;object-fit:cover;object-position:center 46%;border-radius:22px;border:1px solid #fff;box-shadow:0 9px 24px #183c6014;margin-top:8px;}
+@media(max-width:900px){#team > .home-container{width:calc(100% - 48px);padding:28px;gap:18px;grid-template-columns:1fr;}#team .home-intro{max-width:650px;font-size:17px;}#team .whole-team{grid-column:1;}}
+@media(max-width:600px){#team{padding:40px 0;}#team > .home-container{width:calc(100% - 36px);padding:22px 18px;gap:16px;border-radius:24px;}#team .home-title{font-size:30px;}#team .home-intro{font-size:16px;line-height:1.55;}#team .whole-team{aspect-ratio:1.5;object-fit:contain;background:#e8e8e8;border-radius:15px;margin-top:4px;}}
+
+/* Split editorial composition: original team photo left, copy right. */
+.company-group #team.team-section > .home-container {
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 24px 42px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  align-items: start;
+}
+#team .whole-team {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  margin: 0;
+  aspect-ratio: 1.9;
+  object-fit: cover;
+  object-position: center 46%;
+  border: 1px solid #ffffffc9;
+  border-radius: 24px;
+  box-shadow: 0 6px 12px #254c7010, 0 22px 36px -14px #346e9b38;
+}
+#team .home-title {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  margin: 20px 0 0;
+  font-size: clamp(30px, 2.8vw, 42px);
+}
+#team .home-intro {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+#team .home-intro::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-bottom: 22px;
+  border-radius: 3px;
+  background: #087bff;
+}
+@media(max-width:1000px) {
+  .company-group #team.team-section > .home-container { gap: 22px 28px; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); }
+  #team .home-title { font-size: 30px; margin-top: 0; }
+  #team .home-intro { font-size: 16px; }
+  #team .whole-team { align-self: center; }
+}
+@media(max-width:700px) {
+  .company-group #team.team-section > .home-container { grid-template-columns: 1fr; gap: 20px; }
+  #team .home-title { grid-column: 1; grid-row: 1; }
+  #team .home-intro { grid-column: 1; grid-row: 2; }
+  #team .whole-team { grid-column: 1; grid-row: 3; aspect-ratio: 1.5; object-fit: contain; border-radius: 20px; }
+  #team .home-intro::before { width: 44px; margin-bottom: 16px; }
+}
+
+/* Compact spacing for the team introduction. */
+.company-group #team.team-section > .home-container { row-gap: 16px; }
+#team .home-title { line-height: 1.06; }
+#team .home-intro { line-height: 1.35; }
+#team .home-intro::before { margin-bottom: 16px; }
+@media(max-width:700px) {
+  .company-group #team.team-section > .home-container { row-gap: 18px; }
+}
+
+/* Brand green accent beneath the team heading. */
+#team .home-intro::before { background: #2ec639; }
+
+/* One cohesive team panel, matching the light status panel above. */
+.company-group #team.team-section > .home-container {
+  padding: 28px;
+  gap: 20px 36px;
+  background: linear-gradient(115deg, #fff, #f4faff 65%, #e7f3ff);
+  border: 1px solid #d5e8fa;
+  border-top: 2px solid #b4d9ff;
+  border-radius: 28px;
+  box-shadow: inset 0 1px 0 #fff, 0 5px 10px #234b7010,
+    0 22px 36px -14px #326d9b33;
+  overflow: hidden;
+}
+#team .whole-team {
+  border: 0;
+  border-radius: 20px;
+  box-shadow: none;
+}
+#team .home-title { margin-top: 16px; }
+@media(max-width:1000px) {
+  .company-group #team.team-section > .home-container { padding: 24px; gap: 18px 26px; }
+  #team .home-title { margin-top: 0; }
+}
+@media(max-width:700px) {
+  .company-group #team.team-section > .home-container { padding: 24px 20px; gap: 20px; border-radius: 24px; }
+  #team .whole-team { border-radius: 16px; }
+}
+
+/* Flush photo fills the entire left side of the shared panel. */
+.company-group #team.team-section > .home-container {
+  padding: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+#team .whole-team {
+  height: 100%;
+  min-height: 340px;
+  align-self: stretch;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+#team .home-title { margin: 32px 32px 0; }
+#team .home-intro { margin: 20px 32px 32px; }
+@media(max-width:1000px) and (min-width:701px) {
+  #team .home-title { margin: 26px 24px 0; }
+  #team .home-intro { margin: 18px 24px 26px; }
+}
+@media(max-width:700px) {
+  .company-group #team.team-section > .home-container { padding: 0; gap: 0; }
+  #team .home-title { margin: 24px 22px 0; }
+  #team .home-intro { margin: 18px 22px 24px; }
+  #team .whole-team { min-height: 0; height: auto; border-radius: 0; }
+}
+
+.company-group #team.team-section > .home-container { border-top: 1px solid #d5e8fa; }
+
+.company-group #team.team-section > .home-container {
+  box-shadow: inset 0 1px 0 #fff, 0 3px 8px #234b700b,
+    0 14px 26px -14px #326d9b24;
+}
+
+/* Brighter white surface specifically behind the team copy. */
+.company-group #team.team-section > .home-container {
+  background: linear-gradient(110deg, #f4faff 35%, #ffffffeb 68%, #fff 100%);
+}
+/* Match the benefit cards: a luminous rim, blue glass surface and layered shadow. */
+.company-group #team.team-section>.home-container{
+ border:1px solid #ffffffed;
+ background:radial-gradient(ellipse at 85% 0%,#ffffffed,transparent 68%),linear-gradient(145deg,#fff,#f8fcff 75%,#edf6ff);
+ box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #ffffff99,0 5px 10px #234b7009,0 20px 34px -12px #326d9b30;
+}
+#team .home-intro::before{
+ width:46px;height:6px;border-radius:6px;background:#2ec639;
+ box-shadow:0 3px 8px #2ec63916;
+}
+/* A blue edge reflection confined to the upper-right corner. */
+.company-group #team.team-section>.home-container{position:relative}
+.company-group #team.team-section>.home-container::after{
+ content:"";position:absolute;inset:0;z-index:2;padding:1.5px;border-radius:inherit;pointer-events:none;
+ background:radial-gradient(ellipse 38% 60% at 100% 0%,#3898ffa6 0%,#72b7ff73 38%,transparent 78%);
+ -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ -webkit-mask-composite:xor;
+ mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ mask-composite:exclude;
+}

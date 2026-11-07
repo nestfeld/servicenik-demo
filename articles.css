@@ -1,0 +1,49 @@
+/* Useful articles: the supplied four-card reference, in the site's type system. */
+#articles{--article-blue:#0875ec;--article-ink:#00051d;padding-block:54px;background:radial-gradient(ellipse at 19% 18%,#ffffffed,transparent 46%),linear-gradient(120deg,#e4f2ff,#e8f4ff 50%,#dfedfc);color:var(--article-ink)}
+#articles .home-section-top{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:28px;margin-bottom:30px;padding-inline:12px}
+#articles .home-title{margin:0;font-size:clamp(32px,3vw,44px);font-weight:800;letter-spacing:-.045em}
+#articles .home-outline{gap:24px;min-height:52px;padding:13px 24px;border:1px solid #0875ec;border-radius:16px;color:#0870cf!important;background:#ffffffa3;font-size:17px}
+#articles .article-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+#articles .home-article{min-width:0;border-radius:28px;background:#fff;box-shadow:0 20px 30px -12px #245f9252,0 6px 14px -8px #255a8626}
+#articles .home-article>a{display:flex;flex-direction:column;align-items:stretch;height:100%;padding:8px;border-radius:28px;color:inherit;text-decoration:none;transition:box-shadow .2s}
+#articles .article-media{display:flex;align-items:center;justify-content:center;aspect-ratio:1.8;overflow:hidden;border-radius:22px;background:radial-gradient(ellipse at 47% 35%,#f6fbff,#e1effd 65%,#d5e9ff)}
+#articles .article-media img{display:block;width:100%;height:100%;min-height:0;padding:12px;object-fit:contain;border-radius:0;mix-blend-mode:multiply}
+#articles .article-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;min-width:0;padding:16px 14px 14px}
+#articles .article-title{margin:0 0 12px;font-family:'Golos Text',Arial,sans-serif;font-size:clamp(18px,1.2vw,19px);font-weight:700;line-height:1.25;letter-spacing:-.025em;overflow-wrap:break-word}
+#articles .article-copy p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin:0 0 16px;font-size:16px;line-height:1.45;color:#4b5d76}
+#articles .article-arrow{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-top:auto;flex-shrink:0;border-radius:50%;background:#e6f2ff;color:var(--article-blue);transition:background-color .2s,color .2s}
+#articles .article-arrow svg{width:24px;height:24px;margin:0;color:inherit}
+#articles .home-article>a:focus-visible{outline:3px solid #0875ec;outline-offset:5px}
+@media(hover:hover) and (pointer:fine){
+ #articles .home-article>a:hover{box-shadow:0 0 0 1px #9dc7f2}
+ #articles .home-article>a:hover .article-arrow{background:#0875ec;color:#fff}
+ #articles .home-outline:hover{background:#fff}
+}
+@media(max-width:1100px){
+ #articles .article-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ #articles .article-title{font-size:20px}
+ #articles .article-copy{padding:18px 16px 16px}
+ #articles .article-media{aspect-ratio:1.9}
+}
+@media(max-width:760px){
+ #articles{padding-block:44px}
+ #articles .home-section-top{padding-inline:0;margin-bottom:30px;gap:20px}
+ #articles .home-outline{font-size:16px;padding-inline:18px;gap:16px}
+ #articles .article-grid{gap:18px}
+ #articles .article-copy{padding:18px 14px 16px}
+ #articles .article-title{font-size:20px}
+}
+@media(max-width:600px){
+ #articles .home-section-top{align-items:center;flex-direction:row;flex-wrap:nowrap;gap:10px}
+ #articles .home-title{min-width:0;font-size:clamp(18px,5.4vw,24px);line-height:1.2;white-space:nowrap;text-wrap:initial}
+ #articles .home-outline{min-height:44px;padding:8px 10px;gap:6px;border-radius:12px;font-size:clamp(12px,3.4vw,14px);white-space:nowrap}
+ #articles .home-outline svg{width:16px;height:16px}
+ #articles .article-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ #articles .home-article,#articles .home-article>a{border-radius:26px}
+ #articles .article-media{aspect-ratio:1.8;border-radius:20px}
+ #articles .article-copy{padding:18px 16px 16px}
+ #articles .article-title{font-size:20px;line-height:1.3}
+ #articles .article-copy p{font-size:16px;line-height:1.5;margin-bottom:16px}
+ #articles .article-arrow{width:46px;height:46px}
+}
+@media(prefers-reduced-motion:reduce){#articles .home-article>a,#articles .article-arrow{transition:none}}

@@ -1,0 +1,65 @@
+/* Scoped leadership layout; original content and controls retained. */
+#management { background:linear-gradient(120deg,#f7fbff,#edf6ff 65%,#e6f2ff); padding:80px 0; }
+#management > .home-container { display:grid;grid-template-columns:minmax(280px,.95fr) minmax(0,2.65fr);column-gap:48px;row-gap:20px;align-items:start; }
+#management .home-title {grid-column:1;grid-row:1;font-size:clamp(32px,3vw,44px);line-height:1.12;margin:0;letter-spacing:-.04em;max-width:340px;}
+#management .home-intro {grid-column:1;grid-row:2;margin:0;font-size:16px;line-height:1.6;color:#5a6b80;}
+#management .people-grid {grid-column:2;grid-row:1/4;gap:22px;align-self:start;}
+#management .person {display:block;position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(160deg,#e0efff,#f9fcff 78%);border:1px solid #ffffffc9;box-shadow:0 14px 34px #4287bd12;}
+#management .person img {width:100%;height:clamp(270px,25vw,360px);object-fit:cover;object-position:center 16%;border-radius:0;background:none;mix-blend-mode:multiply;}
+#management .person figcaption {position:relative;padding:23px 21px 26px;background:linear-gradient(#f6fbffde,#fff);min-height:116px;}
+#management .person strong {font-size:clamp(21px,1.8vw,26px);color:#00051d;}
+#management .person p {font-size:15px;line-height:1.5;color:#5a6b80;margin:6px 0 0;}
+#management .director-contact {grid-column:1;grid-row:3;display:grid;grid-template-columns:1fr;gap:22px;margin:4px 0 0;padding:0;border:0;}
+#management .director-contact .home-outline {width:100%;justify-content:space-between;border:1px solid #9dcbf7;border-radius:15px;min-height:52px;padding:13px 18px;font-size:15px;color:#1263b0;background:#ffffff80;}
+#management .director-contact > div:first-child .home-outline {background:linear-gradient(110deg,#009deb,#0875e7);color:white;border-color:transparent;box-shadow:0 8px 18px #0075d51c;}
+#management .director-contact p {font-size:13px;line-height:1.6;margin:10px 0 0;color:#5a6b80;}
+@media(max-width:1100px){#management > .home-container {grid-template-columns:1fr;gap:24px;}#management .home-title,#management .home-intro,#management .people-grid,#management .director-contact {grid-column:1;grid-row:auto;}#management .home-title{max-width:none;}#management .home-intro{max-width:680px;}#management .director-contact{grid-template-columns:1fr 1fr;gap:28px;}#management .person img{height:330px;}}
+@media(max-width:600px){#management{padding:52px 0;}#management .people-grid{grid-template-columns:1fr;gap:16px;}#management .person{display:grid;grid-template-columns:43% 1fr;align-items:center;border-radius:22px;}#management .person img{height:225px;object-position:center 12%;}#management .person figcaption{padding:18px 16px;background:none;min-height:0;}#management .person strong{font-size:23px;}#management .person p{font-size:14px;}#management .director-contact{grid-template-columns:1fr;gap:22px;}}
+
+#management .director-contact > div:first-child button.home-outline { color: #fff !important; }
+
+/* Tighter introduction with a quiet separator below it. */
+#management .home-intro { line-height: 1.4; }
+#management .home-intro::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: 18px;
+  border-radius: 2px;
+  background: #087bff;
+}
+
+#management .home-intro::after { width: 100%; }
+
+#management .home-intro::after { height: 1px; background: #087bff33; }
+
+/* Fit the contact column to the portrait row without hiding copy. */
+@media(min-width:1101px) {
+  #management > .home-container { row-gap: 14px; }
+  #management .home-intro::after { margin-top: 12px; }
+  #management .director-contact { gap: 16px; margin-top: 0; }
+  #management .director-contact p { font-size: 12px; line-height: 1.4; margin-top: 8px; }
+  #management .director-contact .home-outline { min-height: 48px; padding-block: 11px; }
+}
+
+#management .home-intro::after { content: none; }
+
+/* Quiet explanatory captions, visually grouped with their contact action. */
+#management .director-contact > div { min-width: 0; }
+#management .director-contact p {
+  margin: 12px 6px 0 12px;
+  padding: 0 0 0 12px;
+  border-left: 2px solid #9abbd34d;
+  font-family: "Golos Text", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #62758a;
+  text-wrap: pretty;
+}
+@media(min-width:1101px) {
+  #management .director-contact p { font-size: 12px; line-height: 1.4; margin-top: 10px; }
+}
+
+#management .director-contact p { margin-left: 0; padding-left: 10px; }

@@ -1,0 +1,89 @@
+/* Address data stays in semantic HTML. Styling follows the supplied table reference. */
+#locations{padding-block:40px;background:#f2f5f8;color:#202935}
+#locations>.home-container{width:min(1288px,calc(100% - 64px));padding-bottom:16px;border-radius:14px;background:white;box-shadow:0 8px 30px #132a421c;overflow:hidden}
+#locations .home-section-top{display:flex;flex-direction:column;align-items:stretch;gap:22px;margin:0;padding:28px 22px 18px}
+#locations .home-title{max-width:none;margin:0;text-align:center;font-size:clamp(30px,2.6vw,40px);font-weight:800;line-height:1.18;letter-spacing:-.035em}
+#locations .address-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;width:100%}
+#locations .address-filters select{width:100%;max-width:100%;min-width:0;min-height:44px;padding:9px 34px 9px 14px;border:2px solid #d9dfe5;border-radius:8px;background:#fff;color:#202935;font-family:inherit;font-size:16px;line-height:1.4;cursor:pointer}
+#locations .address-scroll{max-height:560px;overflow:auto;border:0;border-block:1px solid #d9e0e7;border-radius:0;scrollbar-gutter:stable;scrollbar-color:#a2adb8 #f5f7fa;overscroll-behavior-x:contain}
+#locations .address-table{width:100%;min-width:980px;table-layout:fixed;border-collapse:collapse;font-size:15px;line-height:1.4;text-align:left}
+#locations .address-col-type{width:22%}
+#locations .address-col-place{width:31%}
+#locations .address-col-contact{width:29%}
+#locations .address-col-map{width:18%}
+/* Keep column headings available to assistive technology without a visible header row. */
+#locations .address-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#locations .address-table td,#locations .address-table tbody th{padding:10px 14px;border-top:0;border-bottom:1px solid #d9e0e7;vertical-align:middle;overflow-wrap:break-word}
+#locations .address-table tbody th{width:auto;font-size:15px;font-weight:400}
+#locations .address-table tbody tr:last-child>*{border-bottom:0}
+#locations .address-table tbody tr[data-type="branch"]{border-left:3px solid #37b858}
+#locations .address-table tbody tr[data-type="spot"]{border-left:3px solid #087fda}
+#locations .address-table tbody tr:hover{background:#f4f9fe}
+#locations .branch-type,#locations .branch-type.spot{display:inline;max-width:none;color:#202935;font-size:15px;font-weight:400;line-height:1.4}
+#locations .branch-type::before{content:none}
+#locations .branch-phone{display:inline-block;color:#0077c7;font-size:17px;font-weight:700;line-height:1.4;text-decoration:none}
+#locations .branch-phone:hover{text-decoration:underline;text-underline-offset:3px}
+#locations .address-table small{margin-top:4px;font-size:12px;line-height:1.4;color:#596979}
+#locations .branch-social{display:flex;flex-wrap:wrap;gap:3px 10px;margin-top:4px;color:#276c9f;font-size:12px;line-height:1.5}
+#locations .branch-social:empty{display:none}
+#locations .branch-social a:hover{text-decoration:underline;text-underline-offset:3px}
+#locations .map-link{display:inline-flex;align-items:center;justify-content:center;gap:0;min-height:44px;padding:10px 14px;border-radius:8px;background:#007acb;color:#fff!important;font-size:15px;font-weight:500;line-height:1.35;white-space:nowrap;text-decoration:none;transition:background-color .2s}
+#locations .map-link svg{display:none}
+#locations .map-link:hover{background:#0565a9}
+#locations .map-link:focus-visible{outline:3px solid #075c99;outline-offset:4px}
+#locations .address-scroll:focus-visible{outline:3px solid #2378bf;outline-offset:-3px}
+#locations .table-hint{display:none;margin:0;padding:0 24px 16px;font-size:14px;line-height:1.5;color:#596979}
+#locations #address-empty{margin:22px 24px;color:#4b596b}
+#locations .network-map{min-height:60px;gap:20px;margin:14px 20px 0;padding:10px 16px;border:1px solid #d7e5f0;border-radius:12px;background:#f2f8fd}
+#locations .network-map>a{color:#276c9f}
+@media(max-width:1100px){
+ #locations>.home-container{width:calc(100% - 40px)}
+ #locations .table-hint{display:block}
+ #locations .address-table{font-size:15px}
+}
+@media(max-width:600px){
+ #locations{padding-block:32px}
+ #locations>.home-container{width:calc(100% - 28px);padding-bottom:18px}
+ #locations .home-section-top{padding:24px 18px 16px;gap:20px}
+ #locations .home-title{font-size:28px}
+ #locations .address-filters{grid-template-columns:minmax(0,1fr);gap:12px}
+ #locations .address-filters select{font-size:16px;min-height:46px}
+ #locations .table-hint{padding-inline:18px;font-size:13px}
+ #locations .address-scroll{max-height:440px}
+ #locations .network-map{flex-direction:column;gap:12px;margin:14px 18px 0;padding:14px 12px;text-align:center}
+ #locations .network-map>a{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){#locations .map-link{transition:none}}
+@media(min-width:1000px) and (max-width:1100px){#locations .address-table{min-width:960px}}
+
+#locations .network-map .home-outline{min-height:44px;padding:9px 16px;font-size:14px}
+
+/* Match the blue surfaces, rounded controls and typography used across the homepage. */
+#locations{color:#00051d;background:radial-gradient(ellipse at 18% 12%,#ffffffd9,transparent 52%),linear-gradient(120deg,#e7f3ff,#edf7ff 54%,#e2effc)}
+#locations>.home-container{border:1px solid #fff;border-radius:26px;box-shadow:0 18px 40px -18px #2d67963d,0 4px 12px #4287bd0d}
+#locations .home-section-top{background:linear-gradient(120deg,#fbfdff,#f0f7ff)}
+#locations .home-title{text-align:left;font-size:clamp(32px,3vw,44px);letter-spacing:-.04em}
+#locations .address-filters select{border:1px solid #bfd9f1;border-radius:12px;background:#fff;color:#233d59;box-shadow:inset 0 1px 2px #285a8610}
+#locations .address-filters select:hover{border-color:#7db5e9}
+#locations .address-filters select:focus-visible{outline:3px solid #0875ec;outline-offset:3px}
+#locations .address-scroll{border-color:#dce9f5;scrollbar-color:#9cbfe0 #f1f7fd}
+#locations .address-table td,#locations .address-table tbody th{border-bottom-color:#e0eaf4}
+#locations .address-table tbody tr:nth-child(even){background:#f8fbff}
+#locations .address-table tbody tr:hover{background:#edf6ff}
+#locations .branch-type,#locations .branch-type.spot{display:inline-flex;align-items:center;padding:5px 10px;border-radius:8px;background:#edf8f0;color:#28653b;font-size:13px;font-weight:500;line-height:1.4}
+#locations .branch-type.spot{background:#eaf4ff;color:#286493}
+#locations .branch-phone{color:#0870c7}
+#locations .address-table small{color:#617186}
+#locations .branch-social{color:#3275a8}
+#locations .map-link{gap:8px;padding-inline:12px;border:1px solid #c6def6;border-radius:12px;background:#edf6ff;color:#086bc3!important;font-size:14px;font-weight:600}
+#locations .map-link svg{display:block;width:16px;height:16px;color:inherit}
+#locations .map-link:hover{background:#0875ec;border-color:#0875ec;color:white!important}
+#locations .network-map{border-color:#d5e7f7;border-radius:16px;background:linear-gradient(120deg,#f7fbff,#edf6ff)}
+#locations .network-map .home-outline{border-color:#b6d7f5;border-radius:12px;color:#086bc3!important;background:white}
+#locations .network-map .home-outline:hover{background:#e8f3ff}
+@media(max-width:600px){
+ #locations>.home-container{border-radius:22px}
+ #locations .home-title{font-size:28px}
+}
+
+#locations .branch-social .branch-max{color:#71869b;cursor:default;text-decoration:none}

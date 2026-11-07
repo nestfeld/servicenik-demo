@@ -1,0 +1,320 @@
+/* Open photographic composition, using the site's original assets and copy. */
+#advantages{--adv-ink:#00051d;background:linear-gradient(125deg,#f7fbff,#edf6ff);padding:76px 0;color:var(--adv-ink)}
+#advantages .advantages-heading{display:grid;grid-template-columns:1fr 1.12fr;gap:44px;align-items:center;margin-bottom:44px}
+#advantages .home-title{margin:0;font:800 clamp(32px,3.3vw,48px)/1.15 Manrope,Arial,sans-serif;letter-spacing:-.04em}
+#advantages .home-intro{max-width:650px;margin:0;font-size:18px;line-height:1.6;color:#526477}
+#advantages .advantages-grid{display:grid;grid-template-columns:1.07fr 1fr 1fr;gap:32px;align-items:start}
+#advantages .advantage-card,#advantages .advantage-card:first-child{display:block;min-width:0;margin:0;padding:0;background:none;border:0;box-shadow:none;border-radius:0}
+#advantages .advantage-card:not(:first-child){padding-top:48px}
+#advantages .advantage-media{overflow:hidden;border-radius:24px;border:3px solid #fff;background:#fff;box-shadow:0 3px 5px #17334d0b,0 15px 24px #153e621c,0 30px 44px -16px #24568138}
+#advantages .advantage-media img{display:block;width:100%;height:246px;min-height:0;object-fit:cover;object-position:center 28%;border-radius:0}
+#advantages .advantage-card:first-child img{height:352px;min-height:0;object-position:center 30%}
+#advantages .advantage-copy,#advantages .advantage-card:first-child .advantage-copy{padding:30px 8px 0}
+#advantages .advantage-copy::before{content:"";display:block;width:46px;height:6px;border-radius:6px;background:#087bff;box-shadow:0 3px 8px #0075ff16;margin-bottom:18px}
+#advantages .advantage-copy h3{margin:0 0 14px;font:800 clamp(24px,2.1vw,30px)/1.2 Manrope,Arial,sans-serif;letter-spacing:-.035em}
+#advantages .advantage-copy p{margin:0;max-width:none;font-size:17px;line-height:1.6;color:#526477}
+#advantages .status-panel{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:38px;margin-top:52px;padding:32px 36px;min-height:142px;border:1px solid #285b7b;border-top:2px solid #42a8ee;border-radius:24px;background:radial-gradient(ellipse at 100% 0%,#085aab80,transparent 65%),linear-gradient(110deg,#092233,#092b47);box-shadow:inset 0 1px 0 #ffffff19,0 5px 8px #123b5b0d,0 22px 36px -12px #0c365849;color:#fff}
+#advantages .status-copy h3{margin:0 0 8px;font:800 clamp(26px,2.7vw,36px)/1.2 Manrope,Arial,sans-serif;letter-spacing:-.035em}
+#advantages .status-copy p{max-width:800px;margin:0;font-size:16px;line-height:1.55;color:#c5deee}
+#advantages .status-link{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:58px;padding:16px 25px;border:1px solid #409dff;border-radius:17px;background:linear-gradient(125deg,#008cff,#0064ff);box-shadow:inset 0 1px 0 #ffffff36,0 9px 18px #00132840;color:white;font:700 17px/1.4 Manrope,Arial,sans-serif;transition:box-shadow .2s,transform .2s}
+#advantages .status-link svg{width:24px;height:24px;color:inherit}
+#advantages .status-link:focus-visible{outline:3px solid white;outline-offset:5px}
+@media(hover:hover){#advantages .status-link:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 #ffffff36,0 13px 24px #00132860}}
+@media(max-width:1100px){#advantages .advantages-grid{gap:22px}#advantages .advantage-media img{height:205px}#advantages .advantage-card:first-child img{height:295px}#advantages .advantage-copy h3{font-size:25px}#advantages .advantage-copy p{font-size:16px}#advantages .advantages-heading{gap:28px}#advantages .status-panel{gap:24px;padding:28px}}
+@media(max-width:850px){#advantages{padding:56px 0}#advantages .advantages-heading{grid-template-columns:1fr;gap:18px;margin-bottom:30px}#advantages .advantages-grid{grid-template-columns:1fr;gap:34px}#advantages .advantage-card,#advantages .advantage-card:first-child{display:grid;grid-template-columns:.95fr 1fr;gap:26px;align-items:center}#advantages .advantage-card:not(:first-child){padding-top:0}#advantages .advantage-media img,#advantages .advantage-card:first-child img{height:250px}#advantages .advantage-copy,#advantages .advantage-card:first-child .advantage-copy{padding:0}#advantages .status-panel{grid-template-columns:1fr;gap:22px;margin-top:36px}#advantages .status-link{justify-self:start}}
+@media(max-width:540px){#advantages{padding:44px 0}#advantages .home-title{font-size:32px}#advantages .home-intro{font-size:16px}#advantages .advantage-card,#advantages .advantage-card:first-child{display:block}#advantages .advantage-media{border-radius:21px;box-shadow:0 5px 10px #153e6212,0 18px 26px -10px #24568133}#advantages .advantage-media img,#advantages .advantage-card:first-child img{height:235px}#advantages .advantage-copy,#advantages .advantage-card:first-child .advantage-copy{padding:24px 5px 0}#advantages .advantage-copy h3{font-size:26px}#advantages .status-panel{padding:25px 22px;border-radius:22px}#advantages .status-copy h3{font-size:29px}#advantages .status-link{justify-self:stretch;font-size:16px}}
+@media(prefers-reduced-motion:reduce){#advantages .status-link{transition:none;transform:none}}
+
+/* Denser display lettering to match the approved concept. */
+#advantages .home-title {
+  font-weight: 800;
+  letter-spacing: -.025em;
+  -webkit-text-stroke: .45px currentColor;
+  paint-order: stroke fill;
+}
+
+/* Match the denser heading treatment across the benefit cards. */
+#advantages .advantage-copy h3 {
+  font-weight: 800;
+  letter-spacing: -.02em;
+  -webkit-text-stroke: .4px currentColor;
+  paint-order: stroke fill;
+}
+
+/* Broader letterforms rather than tightly compressed tracking. */
+#advantages .home-title,
+#advantages .advantage-copy h3 {
+  font-family: "Golos Text", Arial, sans-serif;
+}
+
+/* Keep broad letterforms with a cleaner, lighter weight. */
+#advantages .home-title,
+#advantages .advantage-copy h3 {
+  font-weight: 700;
+  -webkit-text-stroke: 0;
+}
+
+/* A subtle vertical compression preserves the broad letterforms. */
+#advantages .home-title,
+#advantages .advantage-copy h3 {
+  transform: none;
+  transform-origin: left center;
+}
+
+/* More compact benefit descriptions. */
+#advantages .advantage-copy p { line-height: 1.35; }
+
+/* Brand green accent for the final benefit. */
+#advantages .advantage-card:last-child .advantage-copy::before {
+  background: #2ec639;
+  box-shadow: 0 3px 8px #2ec63916;
+}
+
+/* Bring the section heading and introduction together. */
+#advantages .advantages-heading {
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.12fr);
+  gap: 28px;
+}
+#advantages .advantages-heading .home-intro {
+  border-left: 2px solid #087bff;
+  padding-left: 26px;
+}
+@media (max-width: 850px) {
+  #advantages .advantages-heading { grid-template-columns: 1fr; gap: 16px; }
+  #advantages .advantages-heading .home-intro { padding-left: 18px; }
+}
+
+/* Align the heading and introduction along their upper edge. */
+#advantages .advantages-heading { align-items: start; }
+#advantages .advantages-heading .home-title { transform-origin: left top; }
+@media (min-width: 851px) {
+  #advantages .advantages-heading .home-intro { padding-top: 5px; }
+}
+
+/* Light repair-status panel within the blue site palette. */
+#advantages .status-panel {
+  background: linear-gradient(115deg, #fff, #f4faff 65%, #e7f3ff);
+  border: 1px solid #d5e8fa;
+  border-top: 2px solid #b4d9ff;
+  color: #00051d;
+  box-shadow: inset 0 1px 0 #fff, 0 5px 10px #234b7010,
+    0 22px 36px -14px #326d9b33;
+}
+#advantages .status-copy p { color: #526477; }
+#advantages .status-link:focus-visible { outline-color: #005bc7; }
+
+/* Translucent glass rim with restrained edge reflections. */
+#advantages .advantage-media {
+  position: relative;
+  padding: 5px;
+  border: 1px solid #ffffffd9;
+  background: linear-gradient(135deg, #ffffffed, #ffffff45 38%, #b8d9ef66 70%, #ffffffdb);
+  box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #b9d4e77d,
+    0 3px 6px #17334d0c, 0 15px 24px #153e621c,
+    0 30px 44px -16px #24568138;
+}
+#advantages .advantage-media img { border-radius: 18px; }
+#advantages .advantage-media::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1px solid transparent;
+  border-top-color: #ffffffed;
+  border-left-color: #ffffff9c;
+  border-bottom-color: #c0dff180;
+  border-radius: inherit;
+  pointer-events: none;
+}
+@media(max-width:540px) {
+  #advantages .advantage-media { padding: 4px; }
+  #advantages .advantage-media img { border-radius: 16px; }
+}
+
+/* Unified benefit cards with the existing glass-framed imagery. */
+#advantages .advantages-grid { align-items: stretch; }
+#advantages .advantage-card,
+#advantages .advantage-card:first-child {
+  padding: 14px 14px 26px;
+  border: 1px solid #ffffffed;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #fff, #f8fcff 75%, #edf6ff);
+  box-shadow: inset 0 1px 0 #fff, 0 5px 10px #234b7009,
+    0 20px 34px -12px #326d9b30;
+}
+#advantages .advantage-card:not(:first-child) { padding-top: 14px; }
+#advantages .advantage-copy,
+#advantages .advantage-card:first-child .advantage-copy { padding: 24px 12px 0; }
+@media (max-width: 850px) {
+  #advantages .advantage-card,
+  #advantages .advantage-card:first-child { padding: 14px; }
+  #advantages .advantage-copy,
+  #advantages .advantage-card:first-child .advantage-copy { padding: 12px 12px 12px 0; }
+}
+@media (max-width: 540px) {
+  #advantages .advantage-card,
+  #advantages .advantage-card:first-child { padding: 12px 12px 25px; border-radius: 25px; }
+  #advantages .advantage-copy,
+  #advantages .advantage-card:first-child .advantage-copy { padding: 22px 10px 0; }
+}
+
+/* Consistent proportions, type and spacing across the section. */
+#advantages .home-title,
+#advantages .advantage-copy h3,
+#advantages .status-copy h3 {
+  font-family: "Golos Text", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -.025em;
+  transform: none;
+  -webkit-text-stroke: 0;
+  line-height: 1.2;
+}
+#advantages .advantage-copy p,
+#advantages .status-copy p { font-weight: 400; line-height: 1.4; }
+#advantages .advantages-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+#advantages .advantage-media img,
+#advantages .advantage-card:first-child img { height: 265px; min-height: 0; }
+#advantages .advantage-copy h3 { font-size: 28px; }
+#advantages .advantage-media {
+  box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #b9d4e77d,
+    0 8px 18px -5px #24568130;
+}
+@media (max-width: 1100px) {
+  #advantages .advantages-grid { gap: 20px; }
+  #advantages .advantage-media img,
+  #advantages .advantage-card:first-child img { height: 220px; }
+  #advantages .advantage-copy h3 { font-size: 25px; }
+}
+@media (max-width: 850px) {
+  #advantages .advantages-grid { grid-template-columns: 1fr; gap: 24px; }
+  #advantages .advantage-media img,
+  #advantages .advantage-card:first-child img { height: 245px; }
+}
+@media (max-width: 540px) {
+  #advantages .advantage-media img,
+  #advantages .advantage-card:first-child img { height: 235px; }
+  #advantages .advantage-copy h3 { font-size: 26px; }
+}
+
+/* Match the reviews section title. */
+#advantages .home-title {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: clamp(30px, 3.5vw, 52px);
+  font-weight: 800;
+  color: #00051d;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+  -webkit-text-stroke: .45px currentColor;
+  transform: none;
+}
+@media(max-width:1000px) { #advantages .home-title { font-size: 36px; } }
+@media(max-width:600px) { #advantages .home-title { font-size: 32px; } }
+
+/* Center the divider in the actual gap between the two text blocks. */
+@media (min-width: 1101px) {
+  #advantages .advantages-heading {
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 64px;
+  }
+  #advantages .advantages-heading .home-intro {
+    position: relative;
+    border-left: 0;
+    padding-left: 0;
+  }
+  #advantages .advantages-heading .home-intro::before {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #087bff;
+    pointer-events: none;
+  }
+}
+
+/* Original status explanation paired with a decorative form illustration. */
+#advantages .status-panel { grid-template-columns: 170px minmax(0,1fr) auto; gap: 26px; }
+#advantages .status-panel .status-illustration {display:block;width:170px;height:auto;max-width:100%;border:0;box-shadow:none;object-fit:contain;}
+@media(max-width:1100px){#advantages .status-panel{grid-template-columns:130px minmax(0,1fr);gap:22px;}#advantages .status-panel .status-illustration{width:130px;grid-row:1/3;}#advantages .status-link{grid-column:2;justify-self:start;}}
+@media(max-width:540px){#advantages .status-panel{grid-template-columns:1fr;}#advantages .status-panel .status-illustration{width:160px;grid-row:auto;justify-self:start;}#advantages .status-link{grid-column:1;justify-self:stretch;}}
+
+/* More breathing room without changing content or composition. */
+#advantages { padding-block: 92px; }
+#advantages .advantages-heading { margin-bottom: 56px; }
+#advantages .advantages-grid { gap: 32px; }
+#advantages .advantage-card,
+#advantages .advantage-card:first-child { padding: 18px 18px 34px; }
+#advantages .advantage-card:not(:first-child) { padding-top: 18px; }
+#advantages .advantage-copy,
+#advantages .advantage-card:first-child .advantage-copy { padding: 30px 12px 0; }
+#advantages .advantage-copy h3 { margin-bottom: 18px; }
+#advantages .status-panel { margin-top: 64px; padding: 40px; gap: 34px; }
+#advantages .status-copy h3 { margin-bottom: 14px; }
+@media(max-width:850px) {
+  #advantages { padding-block: 64px; }
+  #advantages .advantages-heading { margin-bottom: 36px; }
+  #advantages .advantages-grid { gap: 28px; }
+  #advantages .advantage-card,
+  #advantages .advantage-card:first-child { padding: 18px; }
+  #advantages .advantage-copy,
+  #advantages .advantage-card:first-child .advantage-copy { padding: 12px 8px 12px 0; }
+  #advantages .status-panel { margin-top: 40px; padding: 30px; gap: 26px; }
+}
+@media(max-width:540px) {
+  #advantages { padding-block: 52px; }
+  #advantages .advantage-card,
+  #advantages .advantage-card:first-child { padding: 14px 14px 30px; }
+  #advantages .advantage-card:not(:first-child) { padding-top: 14px; }
+  #advantages .advantage-copy,
+  #advantages .advantage-card:first-child .advantage-copy { padding: 26px 10px 0; }
+  #advantages .status-panel { padding: 28px 24px; }
+}
+
+/* Edge-to-edge photos without an inner glass frame. */
+#advantages .advantage-card,
+#advantages .advantage-card:first-child,
+#advantages .advantage-card:not(:first-child) {
+  padding: 0 0 34px;
+  overflow: hidden;
+}
+#advantages .advantage-media {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+#advantages .advantage-media::after { content: none; }
+#advantages .advantage-media img { border-radius: 0; }
+#advantages .advantage-copy,
+#advantages .advantage-card:first-child .advantage-copy { padding: 30px 30px 0; }
+@media (min-width: 541px) and (max-width: 850px) {
+  #advantages .advantage-card,
+  #advantages .advantage-card:first-child { padding: 0; }
+  #advantages .advantage-copy,
+  #advantages .advantage-card:first-child .advantage-copy { padding: 24px 24px 24px 0; }
+}
+@media (max-width: 540px) {
+  #advantages .advantage-card,
+  #advantages .advantage-card:first-child { padding: 0 0 30px; }
+  #advantages .advantage-copy,
+  #advantages .advantage-card:first-child .advantage-copy { padding: 26px 24px 0; }
+}
+
+/* Preserve the courier's head in the first photo crop. */
+#advantages .advantage-card:first-child img { object-position: center top; }
+
+/* Brand blue gradient on the benefits heading. */
+#advantages .home-title {
+  background: linear-gradient(110deg, #00a1e8, #0075ff 55%, #0062ef);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0;
+}
+
+/* Center the illustration above the status text on mobile. */
+@media(max-width:540px) {
+  #advantages .status-panel .status-illustration { justify-self: center; }
+}
